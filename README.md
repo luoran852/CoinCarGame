@@ -1,5 +1,6 @@
 # 2021 Computer Graphics - Coin Car Game
-//간단한 프로젝트 설명
+This project is a term-project of computer graphics classes, and its object is 
+to improve programming skills and ability to cooperate with members.
 
 //사진
 
