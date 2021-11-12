@@ -30,15 +30,12 @@ and its object is to improve programming skills and ability to cooperate with me
 **Then you can see the above image in your window. Let's play the game!**
 
 
-## Reference
-- **1. There is a need for an extension program of chrome called "web server for chrome".**
-
 ## Team members & roles
 - **201933089 장준 : junnim123@naver.com** 
-  - **role : map**  
+  - **Role : Map**  
 - **201935034 김한결 : hannn0414@naver.com** 
-  - **role : coin** 
+  - **Role : Coin** 
 - **201935042 문혜정 : buty1013@naver.com**
-  - **role : map**  
+  - **Role : Map**  
 - **201935117 임수이 : sylim9387@naver.com**  
-  - **role : time & score** 
+  - **Role : Time & Score** 
