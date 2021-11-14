@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<style>
+           
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+            
+            button{
+                font-family: "usuzi";
+                background: url('../images/button.png');
+                width: 180px;
+                height: 55px;
+                border: none;
+                color: #888;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            
+            button:hover{
+                color:#fff;
+            }
+			
+			#reset-btn{
+                display: none;
+				position: absolute;
+                bottom: 50px;
+                left: 50%;
+                transform: translateX(-50%) translateY(-100px);
+			}
+		
+            
+            #message{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(120px);
+                width: 300px;
+                font-family: "arial";
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                text-align: center;
+            }
+
+			#play-btn{
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                transform: translateX(-50%) translateY(-100px);
+            }
+
+			#title{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-300px);
+                width: 300px;
+                font-family: "arial";
+                color: rgb(255, 255, 255);
+                font-size: 30px;
+                text-align: center;
+            }
+
+			#parent{
+                text-align: right;
+				background-color: rgb(0, 0, 0);
+				font-size: 25px;
+				font-family: "arial";
+				padding-right: 5%;
+            }
+
+			#time{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 300px;
+                font-family: "arial";
+                color: rgb(255, 255, 255);
+                font-size: 25px;
+                text-align: end;
+				vertical-align: end;
+            }
+		</style>
+
+		<script>
+			//button Sound
+			function play(){
+				var audio = document.getElementById("audio");
+				audio.play();
+			}
+			//gameover sound
+			function play2(){
+				var audio = document.getElementById("audio2");
+				audio.play();
+			}
+			
+			//coin sound
+			function play3(){
+				var audio = document.getElementById("audio3");
+				audio.play();
+			}
+			
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id = "parent">
+			Score: 
+			<span class="time">0</span>
+			 Time: 
+			<span class="time"> 30sec</span>
+		</div>
+		
+		
+		<h1 id="title">COIN CAR RACING</h1>
+		<div id="message">Press PLAY to play the game.</div>
+		
+		<!--sound-->
+		<audio id = "audio" src="audio/button.wav"></audio>
+		<audio id = "audio2" src="audio/gameover.wav"></audio>
+		<audio id = "audio3" src="audio/coin.mp3"></audio>
+
+		<button id="play-btn" onmousedown="play()">PLAY</button>	
+		<button id="reset-btn" onmousedown="play()">Reset</button>
+
+		<script src="../../libs/three.min.js"></script>
+		<script src="../../libs/Detector.js"></script>
+		<script src="../../libs/cannon.min.js"></script>
+		<script src="../../libs/GLTFLoader.js"></script>
+		<script src="../../libs/inflate.min.js"></script>
+		
+		<script src="game.js"></script>	
+		
+		<iframe src="../../CoinCarRacing/carGame/audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>  
+		<audio autoplay loop id="bgmAudio">
+			<source src="./audio/durante-9005.mp3" type="audio/mp3" />
+		</audio>
+
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				const game = new Game();
+				window.game = game;//For debugging only
+			});
+		</script>
+	</body>
+</html>
+
+
